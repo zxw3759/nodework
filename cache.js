@@ -9,7 +9,7 @@ class Cache{
   clearCache (ctx) {
     this.url = ctx.url
     // 到达零点即清空缓存和计时器
-    if (this.currentTime === this.clearTime) {
+    if (this.currentTime > this.clearTime) {
       return '';
     } else {
       return this.cacheData;
